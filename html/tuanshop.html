@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.l{
+			float: left;
+		}
+		.r{
+			float: right;
+		}
+		.header{
+			width: 100%;
+			height: 44px;
+			background: #000;
+			position: fixed;
+			top: 0;
+		}
+		.header h2{
+			margin: 0;
+			width: 100%;
+			height: 100%;
+			line-height: 44px;
+			font-size: 16px;
+			color:#fff;
+			text-align: center;
+		}
+		.header-lef{
+			width: 44px;
+			height: 44px;
+			line-height: 44px;
+			text-align: center;
+			color:#fff;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.header-lef a{
+			color:#fff;
+		}
+		.header-right{
+			width: 44px;
+			height: 44px;
+			line-height: 44px;
+			text-align: center;
+			color:#fff;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		.header-right .icon-jiugongge{
+			font-size: 25px;
+		}
+		.oneimg{
+			margin-top: 44px;
+			width: 100%;
+			height: 77.3%;
+			min-width: 200px;
+		}
+		.oneimg img{
+			width: 100%;
+			height: 100%;
+		}
+		.oneimg1{
+			width: 100%;
+			height: 77.3%;
+			min-width: 200px;
+		}
+		.oneimg1 img{
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		.oneimg1 .img1{
+			width: 50%;
+		}
+		.bottom{
+			margin-bottom: 60px;
+		}
+		.header nav{
+			width: 100%;
+			overflow: hidden;
+			background: #fff;
+		}
+		.header nav a{
+			float: left;
+			text-align: center;
+			line-height: 26px;
+			padding: 5px 0;
+			color:#000;
+			width: 25%;
+		}
+		.header nav a i{
+			color:#555;
+		}
+		.header nav a .icon-shouye{
+			font-size: 23px;
+		}
+		.header nav a .icon-huiyuanzhongxin{
+			font-size: 20px;
+		}
+		.header nav a .icon-gouwuche{
+			font-size: 23px;
+		}
+		.header nav a .icon-zaixianzixun{
+			font-size: 23px;
+		}
+	</style>
+</head>
+<script>
+	
+</script>
+<body ng-app="app">
+	<div class="header" ng-controller="strl1">
+		<h2>2018.11.11团购券</h2>
+		<div class="header-lef"><a href="http://127.0.0.1/web03armi/LOHOglasslife/index.html#/"><i class="iconfont icon-zuojiantou"></i></a></div>
+		<div class="header-right" ng-click="butm()"><i class="iconfont icon-jiugongge"></i></div>
+		<nav ng-show="info">
+			<a href=""><i class="iconfont icon-shouye"></i><br>首页</a>
+			<a href=""><i class="iconfont icon-huiyuanzhongxin"></i><br>会员中心</a>
+			<a href=""><i class="iconfont icon-gouwuche"></i><br>购物车</a>
+			<a href=""><i class="iconfont icon-zaixianzixun"></i><br>在线咨询</a>
+		</nav>
+	</div>
+	<div class="oneimg">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925096682188788.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925102118535458.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925108397393315.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925113209385777.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925158239103923.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925164249433442.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925191483953230.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925201651523027.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925215914005780.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925234860638270.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925333633607536.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925366953911519.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925339517968164.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925353370434177.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925386273357912.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925401540450841.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925408098489854.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925416965869083.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925422537089291.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925429489040465.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925436994848520.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925444256803702.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925451547996837.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925458795499981.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img class="img1 l" src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925476753771113.jpg" alt="">
+		<img class="img1 l" src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925480051324362.jpg" alt="">
+		<img class="img1 l" src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925487947072345.jpg" alt="">
+		<img class="img1 l" src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925491968111205.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925498430592317.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925508758536221.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925519643998093.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925550470678977.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925560610196177.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925570569254381.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925622960837152.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925629232186960.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925635883903269.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925649209137819.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925656350078793.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925662467630247.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925674747302053.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925686226091911.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925693941759062.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925710399216822.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925716358267559.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925722652350509.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925747520425891.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925756734623044.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925764306567663.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925769088048714.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925784482576993.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925789673439860.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925794130918471.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925800550670238.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925815589397125.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925821316376661.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925832442136176.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925837747482339.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925843844204425.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925848715241084.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925859802344878.jpg" alt="">
+	</div>
+	<div class="oneimg1">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925865363542061.jpg" alt="">
+	</div>
+	<div class="oneimg1 bottom">
+		<img src="http://img2.loho88.com/images/activ_m/5bd9168c52354445008b4567/1540925872324109191.jpg" alt="">
+	</div>
+</body>
+</html>

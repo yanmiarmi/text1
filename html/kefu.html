@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.all{
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			background: rgba(0,0,0,0.3);
+		}
+		.chatwrap{
+			width: 100%;
+			height: 90%;
+			background: #fff;
+			position: fixed;
+			top: 10%;
+		}
+		.chatwrap .header{
+			width: 100%;
+			height: 44px;
+			line-height: 44px;
+			background: #189aff;
+			border-radius: 20px 20px 0 0;
+			padding-left: 20px;
+			font-size: 20px;
+			color:#fff;
+		}
+		.chatwrap .header .icon-xiala{
+			float: right;
+			margin-right: 20px;
+			font-size: 25px;
+		}
+		.chatwrap .tlak{
+			width: 100%;
+			height: 100%;
+		}
+		.chatwrap .bottr{
+			width: 100%;
+			height: 50px;
+			position: absolute;
+			bottom: 60px;
+		}
+		.chatwrap input{
+			width: 85%;
+			height: 50px;
+			border: none;
+			outline: none;
+			padding-left: 15px;
+			font-size: 18px;
+		}
+		.chatwrap .bottr button{
+			width: 15%;
+			outline: none;
+			height: 50px;
+			border: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="all">
+		<div class="chatwrap">
+			<div class="header">loho眼镜生活:小婷 <i class="iconfont icon-xiala"></i></div>
+			<div class="tlak"></div>
+			<div class="bottr">
+				<input type="text" placeholder="请输入消息..."><button>发送</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

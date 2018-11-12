@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,intial-scale=1.0,maxmun-scale=1.0,user-scalable=no">
+	<title>LOHO 眼镜生活-快时尚眼镜品牌_全国连锁眼镜店_专业 O2O 配镜平台</title>
+	<script src="http://127.0.0.1/web03armi/LOHOglasslife/js/jquery-1.9.1.min.js"></script>
+	<script src="../angular框架/js/angular.js"></script>
+	<script src="js/angular.roat.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="font/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="font/iconfont1.css">
+	<link rel="stylesheet" type="text/css" href="font/iconfont2.css">
+	<link rel="stylesheet" type="text/css" href="font/iconfont3.css">
+	<link rel="stylesheet" type="text/css" href="font/iconfont4.css">
+	<link rel="stylesheet" type="text/css" href="font/iconfont5.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" ></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html,body{
+			width: 100%;
+			height: 100%;
+			background: #f2f2f2;
+		}
+		.box{
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+		.menu{
+			width: 100%;
+			background: #fff;
+			display: flex;
+			height: 54px;
+			justify-content: space-between;
+			position: fixed;
+			bottom: 0;	
+			left: 0;
+			z-index: 99;
+			margin: 0;
+		}
+		.menu li{
+			flex:1;
+			text-align: center;
+			list-style: none;
+			font-size: 12px;
+		}
+		.menu li a{
+			text-decoration: none;
+			color: #333;
+		}
+		.menu li a p{
+			margin-top: 5px;
+			margin-bottom: 0;
+		}
+		.menu li a p img{
+			width: 28px;
+			height: 28px;
+		}
+		.showAll{
+			width: 100%;
+			position:absolute;
+			top: 0px;	
+			left: 0;
+		}
+	</style>
+</head>
+<body ng-app="app"> 
+	<div class="box">
+		<ul class="menu">
+			<li>
+				<a href="#/">
+					<p><img src="http://m.loho88.com/assets/images/index-bootom/home.jpg" alt=""></p><span>首页</span>
+				</a>
+			</li>
+			<li>
+				<a href="#/tuanshop">
+					<p><img src="http://m.loho88.com/assets/images/index-bootom/groupBuy.png" alt=""></p><span>团购</span>
+				</a>
+			</li>
+			<li>
+				<a href="#/kefu">
+					<p><img src="http://m.loho88.com/assets/images/index-bootom/serve.jpg" alt=""></p><span>客服</span>
+				</a>
+			</li>
+			<li>
+				<a href="#/fjtiya">
+					<p><img src="http://m.loho88.com/assets/images/index-bootom/location.jpg" alt=""></p><span>附近体验店</span>
+				</a>
+			</li>
+			<li>
+				<a href="#/mine">
+					<p><img src="http://m.loho88.com/assets/images/index-bootom/my.jpg" alt=""></p><span>我的</span>
+				</a>
+			</li>
+		</ul>
+		<div class="showAll" ng-view>
+		</div>
+	</div>
+</body>
+<script>
+	var app=angular.module("app",["ngRoute"])
+	app.config(["$routeProvider",function($routeProvider){
+		$routeProvider
+		.when("/",{templateUrl:"html/home.html"})
+		.when("/tuanshop",{templateUrl:"html/tuanshop.html"})
+		.when("/kefu",{templateUrl:"html/kefu.html"})
+		.when("/fjtiya",{templateUrl:"html/fjtiya.html"})
+		.when("/mine",{templateUrl:"html/mine.html"})
+		.otherwise({redirectTo:"/"})
+	}])
+
+	// $(function(){
+	// 	$(".fix").click(function(){
+	// 		document.documentElement.scrollTop = 0;
+	// 		document.body.scrollTop = 0;
+	// 	})
+	// })
+
+	app.controller("strl1",function($scope){
+		$scope.info=false;
+		$scope.butm=function(){
+			if($scope.info){
+				$scope.info=false;
+			}else{
+				$scope.info=true;
+			}
+		}
+	})
+	app.controller("ctrl4",function($scope){
+		$scope.Img=[{
+			"weizhi":"中大店",
+			"juli":"10.51",
+			"dizhi":"地址：贵阳市云岩区大营坡鹿冲关路74号中大国际购物中心1层",
+			"url":"http://image.loho88.com/images/shop/50202/1489460230704306.jpg"
+		},{
+			"weizhi":"贵阳亨特国际购物中心店",
+			"juli":"11.92",
+			"dizhi":"地址：贵阳市南明区文昌南路33号亨特国际购物中心1楼154A铺（兰蔻旁）",
+			"url":"http://image.loho88.com/images/shop/50207/1514257303491434.jpg"
+		},{
+			"weizhi":"鸿通城店",
+			"juli":"12.51",
+			"dizhi":"地址：贵阳市南明区解放路100号鸿通购物中心2楼L2B26（星美国际影城）",
+			"url":"http://image.loho88.com/images/shop/50201/1489459982267227.jpg"
+		},{
+			"weizhi":"贵州贵阳海纳广场",
+			"juli":"15.74",
+			"dizhi":"地址：小河区黄河路33号海纳广场2楼（上沃尔玛电梯旁）",
+			"url":"http://image.loho88.com/images/shop/50205/1484991272669382.jpg"
+		},{
+			"weizhi":"小河万科大都会",
+			"juli":"16.15",
+			"dizhi":"地址：贵州省小河区长江路大都会万科购物广场2层206-2号",
+			"url":"http://image.loho88.com/images/shop/50203/1478790683567622.jpg"
+		},{
+			"weizhi":"花溪万宜广场店",
+			"juli":"24.24",
+			"dizhi":"地址：贵州省贵阳市花溪区清溪路111号花溪万宜广场(星巴克后面)",
+			"url":"http://image.loho88.com/images/shop/50208/1519803761794820.jpg"
+		}
+		]
+	})
+</script>
+</html>

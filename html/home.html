@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.l{
+		float: left;
+	}
+	.r{
+		float: right;
+	}
+	.nav{
+		width: 100%;
+		height: 60px;
+		line-height: 60px;
+		position: fixed;
+		top: 0;
+		z-index: 99;
+		background: #fff;
+	}
+	.nav-left{
+		width: 120px;
+		height: 60px;
+		text-align: center;
+	}
+	.nav-left a{
+		text-decoration: none;
+		color:#444;
+		font-size: 14px;
+		padding-left: 12px;
+	}
+	.nav-left .icon-xiala{
+		display: inline-block;
+		width: 28px;
+		height: 28px;
+		font-weight: 700;
+		color: #000;
+	}
+	.nav-logo{
+		width: 72px;
+		height: 31px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		background: url("http://static.loho88.com/assets/images/logo.head.png") no-repeat center center;
+		-webkit-background-size: contain;
+		background-size: contain;
+	}
+	.nav-right{
+		height: 100%;
+	}
+	.carousel{
+		margin-top: 60px;
+	}
+	.inline-list li{
+		list-style: none;
+		float: left;
+	}
+	.inline-list li a{
+		display: block;
+		width: 60px;
+		text-align: center;
+		height: 60px;
+	}
+	.inline-list li a i{
+		width: 28px;
+		height: 28px;
+		display: inline-block;
+		color:#333;
+	}
+	.inline-list li a .icon-gouwuche-copy{
+		font-size: 24px;
+	}
+	.inline-list li a .icon-wode{
+		font-size: 20px;
+	}
+	.item img{
+		margin: 0 auto;
+	}
+	.rowss{
+		width: 100%;
+		max-width: 62.5rem;
+		overflow: hidden;
+		background: #fff;
+    	border-bottom: 1px solid #e1e1e1;
+    	margin-bottom: .8rem;
+    	padding-bottom:36px;
+    	margin: 0 auto;
+	}
+	.rowss li{
+		float: left;
+		list-style: none;
+		width: 25%;
+		text-align: center;
+		height: auto;
+	}
+	.rowss li a{
+		display: block;
+		width: 100%;
+	}
+	.rowss li a div{
+		height: 7.2rem;
+		padding-top: 1.5rem;
+	}
+	.rowss li a div img{
+		width: 54%;
+		max-width: 52.9px;
+		height: auto;
+	}
+	.rowss li a span{
+		color:#333;
+	}
+	.showcase{
+		width: 100%;
+		max-width: 62.5rem;
+		margin: 0 auto;
+		font-size: 1.2rem;
+	}
+	.showcase li{
+		width: 100%;
+		margin-top: 10px;
+		list-style: none;
+	}
+	.showcase li .top h2{
+		padding: .5em 2rem;
+		font-size: 1.4em;
+    	font-weight: 700;
+    	color:#222;
+    	margin: 0;
+	}
+	.showcase li:nth-child(2n+1){
+		border-right: 1px solid #e1e1e1;
+	}
+	.showcase li{
+		border-bottom: 1px solid #e1e1e1;
+	}
+	.showcase li .top h2 a{
+		float: right;
+		font-size: 14px;
+		color:#bdbdbd;
+	}
+	.showcase li .top h2 i{
+		float: left;
+		width: 5px;
+		height: 18px;
+		border-radius: 8px;
+		background: red;
+		margin-right: 3px;
+		margin-top: -2px;
+	}
+	.showcase li .img{
+		display: block;
+		width: 100%;
+	    height: 346.933px;
+	    max-height: 20rem;
+	}
+	.showcase li .img img{
+		width: 100%;
+		height: 100%;
+	}
+	.showcase li ul li{
+		width: 50%;
+		float: left;
+		position: relative;
+	    font-size: 1.2rem;
+	    font-weight: 700;
+	    padding: 1rem;
+	    background: #fff;
+	    margin: 0;
+	    min-height: 10rem;
+	}
+	.showcase li ul li p{
+		text-align: center;
+		margin: 0;
+	}
+	.showcase li ul li .smaltit{
+		font-size: 14px;
+		font-weight: 500;
+	}
+	.showcase li ul{
+		overflow: hidden;
+	}
+	.showcase li ul li .smaltext{
+		line-height: 1.2;
+    	height: 4.3rem;
+    	color:#c1c1c1;
+    	font-size: 16px;
+    	font-weight: 500;
+	}
+	.showcase li ul li p img{
+		width: 100%;
+	}
+	.like{
+		width: 100%;
+		margin: 1rem auto 0;
+	}
+	.like p{
+		padding: 1rem 0;
+	    background: #fff;
+	    margin-bottom: 0;
+	    border: 1px solid #e1e1e1;
+	    border-left: 0;
+	    border-right: 0;
+	    font-size: 1.6rem;
+	    text-align: center;
+	}
+	.like .more{
+		display: block;
+		width: 100%;
+		border-top: 1px solid #e1e1e1;
+	    line-height: 30px;
+	    text-decoration: none;
+	    color: #ababab;
+	    font-weight: 400;
+	    padding: 12px 0;
+	    font-size: 14px;
+	    text-align: center;
+	}
+	.like .icon-xiala{
+		font-weight: 700;
+	}
+	.footer{
+		width: 100%;
+		overflow: hidden;
+		margin-bottom: 70px;
+	}
+	.footer-top{
+		max-width: 62.45rem;
+		margin:0 auto;
+		background: #1d1d1d;
+		overflow: hidden;
+		border-bottom: 2px solid #000;
+	}
+	.footer-top .ft-left,.ft-right{
+		width: 50%;
+		padding: 24px 0;
+		color:#fff;
+	}
+	.footer-top .ft-right{
+		border-left: 1px solid #000;
+	}
+	.footer-top .ft-right p a{
+		color:#fff;
+	}
+	.footer-top .ft-right p .time{
+		display: block;
+		font-size: 12px;
+		color: #333;
+	}
+	.footer-top .ft-right p{
+		margin: 0;
+		font-size: 12px;
+	}
+	.footer-top p{
+		text-align: center;
+	}
+	.footer-top p i{
+		width: 28px;
+		height: 28px;
+		font-size: 22px;
+		color:red;
+		vertical-align: middle;
+	}
+	.footer-middle{
+		max-width: 62.45rem;
+		margin:0 auto;
+		background: #1d1d1d;
+		overflow: hidden;
+		text-align: center;
+		padding: 2rem;
+	}
+	.footer-middle img{
+		width: 22.78%;
+		max-width: 100%;
+   		height: auto;
+	}
+	.footer-bottom{
+		padding: 10px;
+		background: #1d1d1d;
+		color:#fff;
+		border-top: 2px solid #000;
+	}
+	.footer-bottom p{
+		text-align: center;
+		margin: 0;
+		font-size: 12px;
+	}
+	.fix{
+		width: 4rem;
+    	height: 4rem;
+    	border-radius: 50%;
+    	background: rgba(255,255,255,0.5);
+    	position: fixed;
+    	bottom: 72px;
+    	right: 15px;
+    	text-align: center;
+    	line-height: 4rem;
+	}
+	.fix .icon-jiantou{
+		font-size: 35px;
+		color:#6e6e6e;
+	}
+	</style>
+</head>
+<body ng-app="app">
+	<!-- 导航开始 -->
+		<div class="nav" id="top">
+			<div class="nav-left l">
+				<a href="">贵阳市<i class="iconfont icon-xiala"></i></a>
+			</div>
+			<div class="nav-logo"></div>
+			<div class="nav-right r">
+				<ul class="inline-list">
+					<li><a href=""><i class="iconfont icon-gouwuche-copy"></i></a></li>
+					<li><a href=""><i class="iconfont icon-wode"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	<!-- 导航结束 -->
+
+	<!-- banner图部分开始 -->
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		  </ol>
+
+	  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox">
+		    <div class="item active">
+		      <img src="http://img.loho88.com/images/2018/官网促销/750-375.jpg" alt="...">
+		    </div>
+		    <div class="item">
+		      <img src="http://img.loho88.com/images/2018/jmzty.jpg" alt="...">
+		    </div>
+		    <div class="item">
+		      <img src="http://img.loho88.com/images/2018/官网促销/cp750-375.jpg" alt="...">
+		    </div>
+		  </div>
+		</div>
+	<!-- banner图部分结束 -->
+
+	<!-- 圆图眼镜开始 -->
+		<ul class="rowss">
+			<li><a href="">
+					<div><img src="http://img.loho88.com/images/loho-m/xpss.png" alt=""></div>
+					<span>新品上市</span>
+				</a></li>
+			<li><a href="">
+					<div><img src="http://img.loho88.com/images/loho-m/gxyj.png" alt=""></div>
+					<span>光学眼镜</span>
+				</a></li>
+			<li><a href="">
+					<div><img src="http://img.loho88.com/images/loho-m/tyyj.png" alt=""></div>
+					<span>太阳眼镜</span>
+				</a></li>
+			<li><a href="">
+					<div><img src="http://img.loho88.com/images/loho-m/etyj.png" alt=""></div>
+					<span>儿童眼镜</span>
+				</a></li>
+			<li><a href="">
+					<div><img src="http://img.loho88.com/images/loho-m/ppjp.png" alt=""></div>
+					<span>品牌眼镜</span>
+				</a></li>
+			<li><a href="">
+					<div><img src="http://img.loho88.com/images/loho-m/gnyj.png" alt=""></div>
+					<span>功能眼镜</span>
+				</a></li>
+			<li><a href="">
+					<div><img src="http://img.loho88.com/images/loho-m/mtyx.png" alt=""></div>
+					<span>隐形眼镜</span>
+				</a></li>
+			<li><a href="">
+					<div><img src="http://img.loho88.com/images/loho-m/cztyd.png" alt=""></div>
+					<span>查找体验店</span>
+				</a></li>
+		</ul>
+	<!-- 圆图眼镜结束 -->
+
+	<!-- 商品正文部分开始 -->
+		<ul class="showcase">
+			<li>
+				<div class="top">
+					<h2><i></i>5折团购券 全网预售开始！<a href="">更多</a></h2>
+				</div>
+				<a href="" class="img"><img src="http://img.loho88.com/images/2018/官网促销/750-200.jpg" alt=""></a>
+				<ul>
+					<li>
+						<p class="smaltit">无线叠加</p>
+						<p class="smaltext">Free optometry</p>
+						<p><img src="http://img.loho88.com/images/2018/官网促销/双11/tgq1.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">超值团购</p>
+						<p class="smaltext">Value group purchase</p>
+						<p><img src="http://img.loho88.com/images/2018/官网促销/双11/tgq2.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">免费验光</p>
+						<p class="smaltext">Free optometry</p>
+						<p><img src="http://img.loho88.com/images/2018/官网促销/双11/tgq3.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">全场通用</p>
+						<p class="smaltext">Universal</p>
+						<p><img src="http://img.loho88.com/images/2018/官网促销/双11/tgq4.jpg" alt=""></p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="top">
+					<h2><i></i>新品上市<a href="">更多</a></h2>
+				</div>
+				<a href="" class="img"><img src="http://img.loho88.com/images/2018/zssxydd.jpg" alt=""></a>
+				<ul>
+					<li>
+						<p class="smaltit">经典永恒</p>
+						<p class="smaltext">Classic forever</p>
+						<p><img src="http://img.loho88.com/images/2018/yddcp/LH08603-C03.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">清新有型</p>
+						<p class="smaltext">Pure and fresh and stylish</p>
+						<p><img src="http://img.loho88.com/images/2018/newdir/LH07017-C02.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">潮流风尚</p>
+						<p class="smaltext">Trend of fashion</p>
+						<p><img src="http://img.loho88.com/images/2018/yddcp/LH07022-C06.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">文艺圆框</p>
+						<p class="smaltext">Literary round frame</p>
+						<p><img src="http://img.loho88.com/images/2018/newdir/LH01028-C06.jpg" alt=""></p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="top">
+					<h2><i></i>太阳镜<a href="">更多</a></h2>
+				</div>
+				<a href="" class="img"><img src="http://img.loho88.com/images/loho-m/guanggaowei2/05-1.jpg" alt=""></a>
+				<ul>
+					<li>
+						<p class="smaltit">魅力有型</p>
+						<p class="smaltext">Charm has a type</p>
+						<p><img src="http://img.loho88.com/images/2018/yddcp/LH04605-C01.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">轻盈时尚</p>
+						<p class="smaltext">Lightsome style</p>
+						<p><img src="http://img.loho88.com/images/2018/yddcp/LH7002-C3.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">独特品质</p>
+						<p class="smaltext">Unique qualities</p>
+						<p><img src="http://img.loho88.com/images/2018/yddcp/LH00604-C3.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">经典永恒</p>
+						<p class="smaltext">Classic eternity</p>
+						<p><img src="http://img.loho88.com/images/2018/newdir/LH07604-C06.jpg" alt=""></p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="top">
+					<h2><i></i>炭纤维眼镜<a href="">更多</a></h2>
+				</div>
+				<a href="" class="img"><img src="http://img.loho88.com/images/loho-m/guanggaowei2/06-1.jpg" alt=""></a>
+				<ul>
+					<li>
+						<p class="smaltit">轻盈舒适</p>
+						<p class="smaltext">Light and comfortable</p>
+						<p><img src="http://img.loho88.com/images/2018/newdir/LH15012-C15.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">轻盈时尚</p>
+						<p class="smaltext">Lightsome style</p>
+						<p><img src="http://img.loho88.com/images/2018/newdir/LH15011-C01.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">佩戴有型</p>
+						<p class="smaltext">Wearing a stylish</p>
+						<p><img src="http://img.loho88.com/images/2018/newdir/GX9022-C1.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">优雅大方</p>
+						<p class="smaltext">Elegant and generous</p>
+						<p><img src="http://img.loho88.com/images/2018/newdir/WT7518-C22.jpg" alt=""></p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="top">
+					<h2><i></i>板材眼镜<a href="">更多</a></h2>
+				</div>
+				<a href="" class="img"><img src="http://img.loho88.com/images/loho-m/guanggaowei2/02-1.jpg" alt=""></a>
+				<ul>
+					<li>
+						<p class="smaltit">新潮时尚</p>
+						<p class="smaltext">Trendy fashion</p>
+						<p><img src="http://img.loho88.com/images/2018/yddcp/LH08011-C6.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">文艺方框</p>
+						<p class="smaltext">The box of literature and art</p>
+						<p><img src="http://img.loho88.com/images/2018/yddcp/LH07018-C06.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">成熟大方</p>
+						<p class="smaltext">Ripe and generous</p>
+						<p><img src="http://img.loho88.com/images/2018/yddcp/LH06009-C1.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">潮流框型</p>
+						<p class="smaltext">Current frame type</p>
+						<p><img src="http://img.loho88.com/images/2018/newdir/LH06012-C01.jpg" alt=""></p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="top">
+					<h2><i></i>钛线眼镜<a href="">更多</a></h2>
+				</div>
+				<a href="" class="img"><img src="http://img.loho88.com/images/loho-m/guanggaowei2/04-1.jpg" alt=""></a>
+				<ul>
+					<li>
+						<p class="smaltit">经典方框</p>
+						<p class="smaltext">Classic box</p>
+						<p><img src="http://img.loho88.com/images/2018/yddcp/DS011-C1.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">商务镜框</p>
+						<p class="smaltext">Business frame</p>
+						<p><img src="http://img.loho88.com/images/2018/yddcp/DS020-C1.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">文艺清新</p>
+						<p class="smaltext">Fresh and literary</p>
+						<p><img src="http://img.loho88.com/images/2018/newdir/LH01027-C06.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">个性经典</p>
+						<p class="smaltext">Personality classic</p>
+						<p><img src="http://img.loho88.com/images/2018/newdir/LH01005-C1.jpg" alt=""></p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="top">
+					<h2><i></i>防蓝光眼镜<a href="">更多</a></h2>
+				</div>
+				<a href="" class="img"><img src="http://img.loho88.com/images/2018/750-200.jpg" alt=""></a>
+				<ul>
+					<li>
+						<p class="smaltit">时尚护目</p>
+						<p class="smaltext">Fashion eye protection</p>
+						<p><img src="http://img.loho88.com/images/2018/yddcp/newdir/LH07029.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">经典小框</p>
+						<p class="smaltext">Classic small box</p>
+						<p><img src="http://img.loho88.com/images/2018/yddcp/newdir/LH05020.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">潮流优选</p>
+						<p class="smaltext">Trend optimization</p>
+						<p><img src="http://img.loho88.com/images/2018/yddcp/newdir/LH08022.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">时尚达人</p>
+						<p class="smaltext">fashion icon</p>
+						<p><img src="http://img.loho88.com/images/2018/yddcp/newdir/LH05021.jpg" alt=""></p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="top">
+					<h2><i></i>彩色隐形<a href="">更多</a></h2>
+				</div>
+				<a href="" class="img"><img src="http://img.loho88.com/images/loho-m/guanggaowei/LOHO-mtsy2.jpg" alt=""></a>
+				<ul>
+					<li>
+						<p class="smaltit">李圣经同款の琉璃棕</p>
+						<p class="smaltext">Glass Brown 14.1mm</p>
+						<p><img src="http://img.loho88.com/images/loho-m/newdir/LOHO-mt01.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">混血神秘の琉璃灰</p>
+						<p class="smaltext">Glass Grey  14.1mm</p>
+						<p><img src="http://img.loho88.com/images/loho-m/newdir/LOHO-mt02.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">闪耀女神の金粉棕</p>
+						<p class="smaltext">Shining Brown 14.5mm</p>
+						<p><img src="http://img.loho88.com/images/loho-m/newdir/LOHO-mt03.jpg" alt=""></p>
+					</li>
+					<li>
+						<p class="smaltit">派对主角の银粉灰</p>
+						<p class="smaltext">Shining Grey 14.5mm</p>
+						<p><img src="http://img.loho88.com/images/loho-m/newdir/LOHO-mt04.jpg" alt=""></p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	<!-- 商品正文部分结束 -->
+
+	<!-- 可能喜欢 div开始-->
+		<div class="like">
+			<p>你可能喜欢<i class="iconfont icon-xiala"></i></p>
+			<a href="" class="more">点击加载更多...</a>
+		</div>
+	<!-- 可能喜欢 div结束-->
+
+	<!-- 底部开始 -->
+		<div class="footer">
+			<div class="footer-top">
+				<div class="ft-left l">
+					<p><i class="iconfont icon-dingwei"></i>欢迎到体验店试戴</p>
+				</div>
+				<div class="ft-right l">
+					<p><i class="iconfont icon-dianhua"></i><a href="">预约热线：400-887-1920	</a>
+						<span class="time">（服务时间 9:00 - 23:00）</span>
+					</p>
+				</div>
+			</div>
+			<div class="footer-middle">
+				<img src="http://m.loho88.com/assets/images/logo.png" alt="">
+			</div>
+			<div class="footer-bottom">
+				<p>ICP备案证书号：粤ICP备11106081</p>
+				<p>©2005-2018 深圳市乐活电子商务有限公司-时尚眼镜品牌 版权所有，并保留所有权利</p>
+				<p>公司地址：深圳市福田区彩田路彩虹新都彩虹大厦29B</p>
+			</div>
+		</div>
+	<!-- 底部结束 -->
+	
+	<!-- 返回顶部 -->
+		<div class="fix"><i class="iconfont icon-jiantou"></i></div>
+	<!-- 返回顶部 -->
+</body>
+<script type="text/javascript">
+	$(function(){
+		$(".fix").click(function(){
+			document.documentElement.scrollTop = 0;
+			document.body.scrollTop = 0;
+		})
+	})
+</script>
+</html>

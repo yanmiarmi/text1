@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.l{
+			float: left;
+		}
+		.r{
+			float: right;
+		}
+		.all{
+			width: 100%;
+			height: 60px;
+			position: fixed;
+			top: 0;
+			background: #fff;
+		}
+		.header{
+			width: 100%;
+			height: 60px;
+			text-align: center;
+			line-height: 60px;
+			font-size: 16px;
+			position: relative;
+			border-bottom: 1px solid #e1e1e1;
+		}
+		.header-left{
+			width: 60px;
+			height: 60px;
+			text-align: center;
+			line-height: 60px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.header-left .icon-zuojiantou{
+			font-size: 20px;
+		}
+		.header-right{
+			width: 15 0px;
+			height: 60px;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		.header-right .icon-gouwuche-copy{
+			font-size: 22px;
+		}
+		.header-right .line3{
+			width: 25px;
+			height: 25px;
+			margin-top: 19px;
+			margin-right: 20px;
+			margin-left: 20px;
+		}
+		.header-right .line3 span{
+			display: block;
+			width: 20px;
+			height: 2px;
+			background: #000;
+			margin:5px 2px;
+		}
+		.main{
+			margin-top: 60px;
+			width: 100%;
+			min-height: 670px;
+			border: 1px solid #000;
+		}
+		.main-top{
+			width: 100%;
+			/*height: 53%;*/
+			max-width: 62.5rem;
+		}
+		.main-top img{
+			width: 100%;
+			height: 100%;
+		}
+		.main .login{
+			width: 100%;
+			overflow: hidden;
+			background: #fff;
+		}
+		.main .login-l{
+			width: 50%;
+			text-align: center;
+			padding:1rem 2rem;
+		}
+		.active{
+			border-bottom: 2px solid red;
+			color:red;
+		}
+		.from-group{
+			width: 100%;
+			margin:0.8rem 0;
+			padding-left: 6.2%;
+			display: none;
+			border-bottom: 1px solid #ddd;
+		}
+		.from-group .from-item{
+			position: relative;
+		}
+		.from-group .from-item img{
+			position: absolute;
+			width: 31.8%;
+			height: 100%;
+			top: 0;
+			right: 0;
+		}
+		.from-group .from-item input{
+			border: none;
+			border-bottom: 1px solid #ddd;
+			width: 100%;
+			height: 48px;
+			outline: none;
+		}
+		.from-group .from-item .send{
+			width: 31.8%;
+			height: 100%;
+			background: red;
+			position: absolute;
+			text-align: center;
+			line-height: 48px;
+			color:#fff;
+			top: 0;
+			right: 0;
+		}
+		.from-group .from-item:nth-child(3) input{
+			border: none;
+		}
+	</style>
+</head>
+<body ng-app="app">
+	<div class="all">
+		<div class="header">
+			登录
+			<div class="header-left l"><i class="iconfont icon-zuojiantou"></i></div>
+			<div class="header-right r"><i class="iconfont icon-gouwuche-copy"></i>
+				<div class="line3 r">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="main" ng-controller="ctrl5" ng-init="seleced=0">
+		<div class="main-top">
+			<img src="http://m.loho88.com/assets/images/login-banner.png" alt="">
+		</div>
+		<div class="login">
+			<div class="login-l l">手机号码快速登录</div>
+			<div class="login-l l">账号密码登录</div>
+		</div>
+		<div class="bottn">
+			<div class="from-group" style="display: block;">
+				<div class="from-item">
+					<input type="text" placeholder="请输入您的手机号码">
+				</div>
+				<div class="from-item">
+					<input type="text" placeholder="请输入图片验证码">
+					<img src="http://m.loho88.com/code/mobile/getCaptchaCode?0.9372137423836027" alt="">
+				</div>
+				<div class="from-item">
+					<input type="text" placeholder="请输入短信验证码">
+					<div class="send">发送验证码</div>
+				</div>
+			</div>
+			<div class="from-group">
+				<div class="from-item">
+					<input type="text" placeholder="请输入手机号">
+				</div>
+				<div class="from-item">
+					<input type="text" placeholder="请输入密码">
+				</div>
+				<div class="from-item">
+					<input type="text" placeholder="请输入验证码">
+				</div>
+				<a href="">忘记密码？</a>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	$(function(){
+		var index=0;
+		$(".login-l").click(function(){
+			index=$(this).index();
+			$(this).addClass("active").siblings().removeClass("active");
+			$(".from-group").eq(index).css({
+				"display":"block"
+			}).siblings().css({
+				"display":"none"
+			})
+		})
+	})
+</script>
+</html>
